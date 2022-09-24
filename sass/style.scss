@@ -47,3 +47,74 @@ body {
   display: flex;
   margin-left: 10px;
 }
+
+.sidebar {
+  flex: 1 0 0;
+}
+
+.posts {
+  flex: 2 0 0;
+}
+
+.sidebar, .posts {
+  background: $color-light;
+  margin-right: 10px;
+  padding: 40px;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
+}
+
+/* Logo */
+
+.logo {
+  font-family: $font-logo;
+  font-weight: 400;
+  font-size: 104px;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Lists */
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  .active {
+    font-weight: bold;
+  }
+}
+
+.list-horizontal {
+  li {
+    display: inline-block;
+  }
+}
+
+/* Authors */
+
+.authors {
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+/* Post */
+
+.post {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.post-author {
+  font-style: italic;
+}
+
+.post-tags {
+  display: flex;
+  p {
+    margin: 0 10px 0 0;
+  }
+}
