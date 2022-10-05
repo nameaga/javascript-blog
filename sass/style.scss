@@ -90,7 +90,6 @@ body {
     display: inline-block;
   }
 }
-
 /* Authors */
 
 .authors {
@@ -117,4 +116,24 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+}
+/* Tags */
+.list.tags li{
+  display: inline-block;
+  margin: 0 5px;
+.tag-size-1 {
+  font-size: 14px;
+}
+.tag-size-2 {
+  font-size: 18px;
+}
+.tag-size-3 {
+  font-size: 22px;
+}
+.tag-size-4 {
+  font-size: 26px;
+}
+.tag-size-5 {
+  font-size: 30px;
+}
 }
