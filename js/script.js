@@ -249,8 +249,10 @@ function generateAuthors() {
     const author = article.getAttribute('data-author');
     console.log('author', author);
     /* generate HTML of the link */
-    const linkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>';
-    console.log('author link' , linkHTML);
+    const linkHTMLData = {id: author, author: author};
+    const linkHTML = templates.articleAuthor(linkHTMLData);
+    /*const linkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>';
+    console.log('author link' , linkHTML);*/
     /* add generated code to html variable */
     html = html + linkHTML;
     /* [NEW] check if this link is NOT already in allTags */
