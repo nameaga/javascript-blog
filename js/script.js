@@ -169,22 +169,28 @@ function generateTags(){
   console.log('tagsParams:', tagsParams)
 
   /* [NEW] create variable for all links HTML code */
-  let allTagsHTML = '';
-
+  /*let allTagsHTML = '';*/
+  const allTagsData = {tags: []};
   /* [NEW] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
     /* [NEW] generate code of a link and add it to allTagsHTML */
 
     tagLinkHTML = '<li><a href="#tag-' + tag + '" class="' + calculateTagClass(allTags[tag], tagsParams) + '"><span>' + tag + /*' (' + allTags[tag] + ') ' +*/ '</span></a></li>';
     console.log('tagLinkHTML:', tagLinkHTML);
-    allTagsHTML += tagLinkHTML;
-    console.log('tagi html', allTagsHTML);
+    allTagsData.tags.push({
+      tag: tag,
+      count: allTags[tag],
+      className: calculateTagClass(allTags[tag], tagsParams)
+    });
+    /*allTagsHTML += tagLinkHTML;
+    console.log('tagi html', allTagsHTML);*/
   }
   /* [NEW] END LOOP: for each tag in allTags: */
 
   /*[NEW] add HTML from allTagsHTML to tagList */
-  tagList.innerHTML = allTagsHTML;
-
+  /*tagList.innerHTML = allTagsHTML;*/
+  tagList.innerHTML = templates.tagCloudLink(allTagsData);
+  console.log(allTagsData);
 }
 
 generateTags();
