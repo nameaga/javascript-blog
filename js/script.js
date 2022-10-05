@@ -296,7 +296,7 @@ function generateAuthors() {
     /*[NEW] add HTML from allTagsHTML to tagList */
     /*authorList.innerHTML = allAuthorsHTML;*/
     authorList.innerHTML = templates.authorListLink(allAuthorsData);
-    console.log(authorList);
+    console.log('lista', allAuthorsData);
   }
 }
 generateAuthors();
